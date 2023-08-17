@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Vos Listes</h2>
+          <ul class="list-group">
+            <% @lists.each do |list| %>
+              <li class="list-group-item">
+                <%= link_to list.name, list_path(list), class: "text-dark" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
